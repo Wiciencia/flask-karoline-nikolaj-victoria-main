@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+	    <meta charset="UTF-8">
+	    <title>HTML struktur</title>
+	    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+    <div id="wrapper">
+        <header>
+		<div id="logo">
+		<img src="../static/img/unord_logo.png">
+		</div>
+	<div id="menu">
+		<ul>
+			<li><a href="#">Start</a></li>
+			<li><a href="/side2/">Side 2</a></li>
+			<li><a href="/login">Login</a></li>
+		</ul>
+	</div>
+	</header>
+	<aside>
+		<p>Sidebar</p>
+	</aside>
+	<div id="content">
+        <h1>Hi, {{ user.username }}!</h1>
+        {% for post in posts %}
+        <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+        {% endfor %}
+	</div>
+	<footer>
+		Footer
+	</footer>
+
+    </div>
+    </body>
+</html>
